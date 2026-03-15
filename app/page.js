@@ -2,7 +2,7 @@ import Link from "next/link";
 
 /**
  * VitalPass Homepage
- * Entry point with options to create profile or manage family profiles
+ * Single entry point – Manage Family Profiles
  */
 export default function HomePage() {
   return (
@@ -19,44 +19,22 @@ export default function HomePage() {
     >
       <h1 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>VitalPass</h1>
       <p style={{ color: "#666", marginBottom: "2rem", fontSize: "1.125rem" }}>
-        Your Emergency Medical Identity
+        Emergency Medical Identity System
       </p>
 
-      <div
+      <Link
+        href="/dashboard"
         style={{
-          display: "flex",
-          gap: "1rem",
-          flexWrap: "wrap",
-          justifyContent: "center",
+          padding: "0.75rem 1.5rem",
+          backgroundColor: "#0070f3",
+          color: "white",
+          textDecoration: "none",
+          borderRadius: "8px",
+          fontWeight: 500,
         }}
       >
-        <Link
-          href="/create-profile"
-          style={{
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "#0070f3",
-            color: "white",
-            textDecoration: "none",
-            borderRadius: "8px",
-            fontWeight: 500,
-          }}
-        >
-          Create Profile For Yourself
-        </Link>
-        <Link
-          href="/dashboard"
-          style={{
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "#333",
-            color: "white",
-            textDecoration: "none",
-            borderRadius: "8px",
-            fontWeight: 500,
-          }}
-        >
-          Manage Family Profiles
-        </Link>
-      </div>
+        Manage Family Profiles
+      </Link>
     </div>
   );
 }
